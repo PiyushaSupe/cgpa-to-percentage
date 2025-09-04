@@ -103,31 +103,74 @@
       let percentage = null;
       let grade = "";
 
-      if (gpa >= 9.50) {
-        percentage = 20 * gpa - 100;
-        grade = "O (Outstanding)";
-      } else if (gpa >= 8.25) {
-        percentage = 12 * gpa - 25;
-        grade = "A+";
-      } else if (gpa >= 6.75) {
-        percentage = 10 * gpa - 7.5;
-        grade = "A";
-      } else if (gpa >= 5.75) {
-        percentage = 5 * gpa + 26.25;
-        grade = "B+";
-      } else if (gpa >= 5.25) {
-        percentage = 10 * gpa - 2.5;
-        grade = "B";
-      } else if (gpa >= 4.75) {
-        percentage = 10 * gpa - 2.5;
-        grade = "C";
-      } else if (gpa >= 4.00) {
-        percentage = 6.6 * gpa + 13.6;
-        grade = "D";
-      } else {
-        percentage = 0;
-        grade = "F (Fail)";
-      }
+      // if (gpa >= 9.50) {
+      //   percentage = 20 * gpa - 100;
+      //   grade = "O (Outstanding)";
+      // } else if (gpa >= 8.25) {
+      //   percentage = 12 * gpa - 25;
+      //   grade = "A+";
+      // } else if (gpa >= 6.75) {
+      //   percentage = 10 * gpa - 7.5;
+      //   grade = "A";
+      // } else if (gpa >= 5.75) {
+      //   percentage = 5 * gpa + 26.25;
+      //   grade = "B+";
+      // } else if (gpa >= 5.25) {
+      //   percentage = 10 * gpa - 2.5;
+      //   grade = "B";
+      // } else if (gpa >= 4.75) {
+      //   percentage = 10 * gpa - 2.5;
+      //   grade = "C";
+      // } else if (gpa >= 4.00) {
+      //   percentage = 6.6 * gpa + 13.6;
+      //   grade = "D";
+      // } else {
+      //   percentage = 0;
+      //   grade = "F (Fail)";
+      // }
+if (gpa === 10.0) {
+  percentage = 100;
+  grade = "O (Outstanding)";
+} else if (gpa >= 9.5 && gpa < 10) {
+  percentage = 20 * gpa - 100; // Example: 9.5 → 90
+  grade = "O (Outstanding)";
+} else if (gpa >= 9.0 && gpa < 9.5) {
+  percentage = 12 * gpa - 24; // Example: 9.0 → 84
+  grade = "A+";
+} else if (gpa >= 8.25 && gpa < 9.0) {
+  percentage = 12 * gpa - 24; // Example: 8.25 → 75
+  grade = "A+";
+} else if (gpa >= 8.0 && gpa < 8.25) {
+  percentage = 10 * gpa - 7.5; // Example: 8.0 → 72.5
+  grade = "A";
+} else if (gpa >= 7.0 && gpa < 8.0) {
+  percentage = 10 * gpa - 7.5; // Example: 7.0 → 62.5
+  grade = "A";
+} else if (gpa >= 6.75 && gpa < 7.0) {
+  percentage = 10 * gpa - 7.5; // Example: 6.75 → 60
+  grade = "A";
+} else if (gpa >= 6.25 && gpa < 6.75) {
+  percentage = 5 * gpa + 26.25; // Example: 6.25 → 57.5
+  grade = "B+";
+} else if (gpa >= 5.75 && gpa < 6.25) {
+  percentage = 5 * gpa + 26.25; // Example: 5.75 → 55
+  grade = "B+";
+} else if (gpa >= 5.5 && gpa < 5.75) {
+  percentage = 10 * gpa - 2.5; // Example: 5.5 → 52.5
+  grade = "B";
+} else if (gpa >= 5.25 && gpa < 5.5) {
+  percentage = 10 * gpa - 2.5; // Example: 5.25 → 50
+  grade = "B";
+} else if (gpa >= 4.75 && gpa < 5.25) {
+  percentage = 10 * gpa - 2.5; // Example: 4.75 → 45
+  grade = "C";
+} else if (gpa >= 4.0 && gpa < 4.75) {
+  percentage = 6.6 * gpa + 13.6; // Example: 4.0 → 40
+  grade = "D";
+} else {
+  percentage = 0;
+  grade = "F (Fail)";
+}
 
       percentage = percentage.toFixed(2);
 
@@ -152,3 +195,4 @@
 <footer>
 </footer>
 </html>
+
